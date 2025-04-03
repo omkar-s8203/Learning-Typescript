@@ -20,9 +20,9 @@
 
 // ---------------Function----------------------
 
-function addTwo(num: number){
-    // return num + 2;
-    return "hello this is omkar suryawasnshi"
+function addTwo(num: number): number{
+    return num + 2;    //only number can be return
+    // return "hello"
 };
 
 function getUpper(val: string){
@@ -42,5 +42,42 @@ sugnUpUser("omkar", "omkar@123.com" , "omkar123" , true);
 
 console.log(getUpper("omkar suryaanshiu"));
 console.log(addTwo(5));
+
+
+// function getValue(myVal: number): boolean{
+//     if(myVal > 5){
+//         return true;
+//     }
+//     return "200 ok"
+// }
+
+
+const getHello = (s: string):string =>{
+    return ""
+}
+
+const heros = ["thoe", "spiderman" , "ironMan"];
+
+console.log( heros.map(hero => {
+    return `hero is ${hero}`
+}))
+
+console.log(heros.map((hero): string => {
+    return `hero is my ${hero}`
+}))
+
+
+function consoleError(errmsg: string): void{
+    console.log(errmsg);
+}
+
+consoleError("this is an better way to write an code")
+
+
+function handleError(errmsg: string): never{
+    throw new Error(errmsg);
+}
+
+// handleError("this is an best way to handle the error in typescript");
 
 export{}
